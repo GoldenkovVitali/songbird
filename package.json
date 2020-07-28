@@ -7,9 +7,11 @@
     "test": "jest",
     "test-watch": "jest --watch",
     "test-coverage": "jest --coverage",
-    "build": "webpack --mode production",
+    "build": "webpack -p",
     "dev": "webpack-dev-server --mode development --open",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "analyze": "webpack -p --env.analyze",
+    "clean": "rm -f -r dist"
   },
   "repository": {
     "type": "git"
@@ -56,6 +58,7 @@
     "prop-types": "^15.6.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "regenerator-runtime": "^0.13.1"
+    "regenerator-runtime": "^0.13.1",
+    "webpack-bundle-analyzer": "^3.8.0"
   }
 }

@@ -1,8 +1,14 @@
+/* eslint-disable */
 const path = require('path');
 const HtmlPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
-module.exports = {
+function NothingPlugin() {
+  this.apply = function () {};
+}
+
+const config = env => ({
   entry: './src/index.jsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -68,6 +74,7 @@ module.exports = {
       template: path.join(__dirname, '/src/index.html'),
       favicon: path.join(__dirname, '/src/assets/favicon.png'),
     }),
+    env && env.analyze ? new BundleAnalyzerPlugin() : new NothingPlugin(),
   ],
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -80,4 +87,6 @@ module.exports = {
     compress: true,
     port: 3000,
   },
-};
+});
+
+module.exports = env => config(env);
