@@ -72,7 +72,8 @@ const config = env => ({
     new ExtractTextPlugin('style.css'),
     new HtmlPlugin({
       template: path.join(__dirname, '/src/index.html'),
-      favicon: path.join(__dirname, '/src/assets/favicon.png'),
+      favicon: path.join(__dirname, '/src/assets/1111.png'),
+      favicon: path.join(__dirname, '/src/assets/1111.svg'),
     }),
     env && env.analyze ? new BundleAnalyzerPlugin() : new NothingPlugin(),
   ],
