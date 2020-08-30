@@ -1,0 +1,50 @@
+.songbird-victorina-bird {
+    margin-bottom: 25px;
+    padding: 1.1rem;
+    display: flex;
+  }
+
+  button:focus {
+    outline: none;
+}
+  .songbird-victorina-bird .bird-image {
+    margin: 0px;
+    height: 155px;
+    width: 200px;
+    border-radius: 10px;
+  }
+  
+  .songbird-victorina-bird > div {
+    margin: 0;
+    width: calc(100% - 235px);
+  }
+  
+  .songbird-victorina-bird .list-group {
+    margin-left: 39px;
+  }
+  
+  .songbird-victorina-bird .list-group-item {
+    padding: .24rem;
+  }
+  
+  @media (max-width: 600px) {  
+    .songbird-victorina-bird {
+      flex-direction: column;
+    }
+    .songbird-victorina-bird > div {
+      margin: 0;
+      width: 100%;
+    }
+    
+    .songbird-victorina-bird .bird-image {
+      margin: 0 auto 25px;
+    }
+    
+    .songbird-victorina-bird .list-group {
+      margin-left: 0px;
+    }
+    
+    h5 {
+      text-align: center;
+    }
+  }
